@@ -1,0 +1,157 @@
+/* General terminal styling */
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.terminal {
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    overflow-y: auto; /* Ensure the terminal scrolls */
+    height: 300px; /* Set a height for scrolling */
+    overflow-y: hidden;
+}
+
+.output {
+    min-height: 200px;
+    margin-bottom: 10px;
+}
+
+/* Style paragraphs inside the output container */
+.title p {
+    color: #00ff00; /* Green for terminal-like appearance */
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+/* Image section styling */
+.image-section {
+    width: 50%;
+    height: 37.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Darker background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    padding: 10px;
+}
+
+.image-section img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 1);
+ 
+}
+.left{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    width: 45%;
+    padding: 20px;
+
+}
+/* Style for input box */
+input {
+    background-color: black; /* Black background */
+    color: white; /* White text color */
+    border: 1px solid #00ff00; /* Green border */
+    padding: 10px; /* Padding for space inside the input */
+    font-family: monospace; /* Monospace font for terminal feel */
+    caret-color: #00ff00; /* Green blinking cursor */
+    outline: none; /* Remove default outline */
+}
+
+/* For blinking cursor effect */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+input {
+    caret-color: transparent; /* Hide default caret */
+    position: relative;
+}
+
+input::after {
+    content: ''; /* Create a custom blinking caret */
+    position: absolute;
+    right: 5px;
+    width: 2px;
+    height: 1.2em;
+    background-color: #00ff00; /* Green color */
+    animation: blink 1s step-start infinite; /* Blinking effect */
+}
+/* General styles */
+body {
+    margin: 0;
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Terminal styling */
+.terminal {
+    width: 80%;
+    max-width: 800px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Input box styling */
+input {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-family: monospace;
+    caret-color: #00ff00;
+    outline: none;
+}
+
+/* Output box styling */
+.output {
+    margin-top: 10px;
+    color: #00ff00; /* Green text for the output */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    grid-template-rows: repeat(2, auto); /* Create 2 rows */
+    gap: 10px; /* Gap between grid items */
+}
+
+/* Style for each item in the grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 10px; /* 10px gap between items */
+}
+
+.grid-item {
+    background-color: black; /* Slightly lighter background for items */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
